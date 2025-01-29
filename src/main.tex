@@ -1,0 +1,89 @@
+%! Author = Arlo Bannon-David
+%! Date = 1/19/2025
+
+\documentclass{ol-softwaremanual}
+
+% Packages used in this example
+\usepackage{graphicx}  % for including images
+\usepackage{microtype} % for typographical enhancements
+\usepackage{minted}    % for code listings
+\usepackage{amsmath}   % for equations and mathematics
+\usepackage{xparse}  % for inline code
+\setminted{style=friendly,fontsize=\small}
+\renewcommand{\listoflistingscaption}{List of Code Listings}
+\usepackage{hyperref}  % for hyperlinks
+\usepackage[a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry} % for setting page size and margins
+
+% Custom macros used in this example document
+\newcommand{\doclink}[2]{\href{#1}{#2}\footnote{\url{#1}}}
+\newcommand{\cs}[1]{\texttt{\textbackslash #1}}
+
+% Frontmatter data; appears on title page
+\title{Basics of Network Security}
+\version{1.0.0}
+\author{Arlo Bannon-David}
+
+\begin{document}
+
+    \maketitle
+
+    \tableofcontents
+
+    \newpage
+
+    \section{Introduction}\label{sec:introduction}
+
+    In this document, I will outline my personal methods for basic network security on a Cisco 2950 Series Switch.
+    This is not all-encompassing, and I plan to iterate on it in the future.\\
+
+    The original purpose of this document is for the Cybersecurity in Networks Workshop with ShiftKey Labs on January 16, 2025.\\
+
+    Although this guide is based on the build notes for a physical switch, it can be recreated using network simulation programs such as Cisco Packet Tracker. Although these programs may not have the Cisco 2950 Series Switch used in this document, others can be used, as the syntax is typically similar. You can find documentation online for most Cisco network hardware that describes its command syntax. If a command isn't working, try searching the command with your model of hardware.
+
+    \section{Hardware}\label{sec:hardware}
+    This guide uses the following:
+    \begin{enumerate}
+        \item \doclink{https://www.cisco.com/c/dam/en/us/td/docs/switches/lan/catalyst2955/software/release/12_1_12c_ea1/command/reference/cr2955.pdf}{Cisco Catalyst 2950 Series} (24 Ports)
+        \item USB to RJ45 Console Cable (Learn more about console cables \doclink{https://www.cablesandkits.com/learning-center/what-are-console-cables-why-need-them}{here})
+        \item CAT6A Ethernet Cable
+        \item Windows 11 Device
+    \end{enumerate}
+
+    \section{Steps}\label{sec:steps}
+        \subsection{Installation \& Setup}\label{subsec:installation}
+        \begin{enumerate}
+            \item Plug the RJ45 connection side of console cable into the console port on your switch, typically located on the back.
+            \item Plug the USB side into a USB port on your device.
+            \item Install \doclink{https://www.putty.org/}{PuTTY} or similar SSH Client
+            \item Open Device Manager
+                \begin{enumerate}
+                    \item Expand \verb|Ports (COM & LPT)|
+                    \item Find \verb|USB Serial Port (COMx)| and note \verb|x|.
+                \end{enumerate}
+            \item Open PuTTY
+                \begin{enumerate}
+                    \item Select \verb|Serial| connection type
+                    \item Change from \verb|COM1| to \verb|COMx|, where \verb|x| is the previously noted interface.
+                    \item Set the speed based on your device (9600 is common, and is the speed the Catalyst 2950 uses)
+                    \item Select \verb|Open|
+                \end{enumerate}
+            \item Press enter once the console screen opens.
+            You should see "\verb|Switch>|".
+            \item Run the "\verb|enable|" command.
+            You should see "\verb|Switch#|".
+            \item Run "\verb|show running|" to ensure the configuration is cleared.
+        \end{enumerate}
+        \subsection{Switch Configuration}\label{subsec:config}
+        To enter configuration mode, enter the command \verb|configure terminal|.\\
+        You should now see \verb|Switch(config)#|
+            \subsubsection{Hostname}\label{subsubsec:hostname}
+            Setting a hostname is especially important on multiple-device networks to tell the difference between each device.\\
+            In configuration mode, run the following command:\\
+            \verb|hostname [new-hostname]|
+            \subsubsection{Set a Password}\label{subsubsec:passwrd}
+            This sets a password to access privileged execution mode, which will prompt you for a password when you enter the \verb|enable| command.
+    
+        \begin{enumerate}
+            \item
+        \end{enumerate}
+\end{document}
