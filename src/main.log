@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.19)  19 JAN 2025 23:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.19)  30 JAN 2025 13:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -899,9 +899,14 @@ LaTeX Font Info:    Font shape `T1/RobotoMono-TLF/regular/n' will be
 
 [2{C:/Users/mackm/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/roboto/rbto_e24
 joy.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 87--96
+
+ []
+
+
 
 [3]
-runsystem(latexminted cleantemp  --timestamp 20250119231639 FAD58DE7366495DB465
+runsystem(latexminted cleantemp  --timestamp 20250130131237 FAD58DE7366495DB465
 0CFEFAC2FCD61)...disabled (restricted).
 
  (main.aux)
@@ -913,11 +918,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 6F89D069BD4439A33A531B44568B5FEF;580.
  ) 
 Here is how much of TeX's memory you used:
- 18034 strings out of 473536
- 350951 string characters out of 5714956
- 876540 words of memory out of 5000000
- 40830 multiletter control sequences out of 15000+600000
- 649776 words of font info for 161 fonts, out of 8000000 for 9000
+ 18045 strings out of 473536
+ 351201 string characters out of 5714956
+ 876591 words of memory out of 5000000
+ 40833 multiletter control sequences out of 15000+600000
+ 650452 words of font info for 165 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,8n,79p,1003b,718s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/mackm/AppData/Local/Programs/MiKTeX/fonts/type1/google/roboto/Robot
@@ -925,9 +930,9 @@ o-Bold.pfb><C:/Users/mackm/AppData/Local/Programs/MiKTeX/fonts/type1/google/rob
 oto/Roboto-Regular.pfb><C:/Users/mackm/AppData/Local/Programs/MiKTeX/fonts/type
 1/google/roboto/RobotoMono-Regular.pfb>
 Output written on "C:/Users\mackm\IdeaProjects\Basic Network Security w Cisco\o
-ut\main.pdf" (4 pages, 86182 bytes).
+ut\main.pdf" (4 pages, 90063 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
- 33 named destinations out of 1000 (max. 500000)
- 67633 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 122 PDF objects out of 1000 (max. 8388607)
+ 35 named destinations out of 1000 (max. 500000)
+ 67649 words of extra memory for PDF output out of 74296 (max. 10000000)
 

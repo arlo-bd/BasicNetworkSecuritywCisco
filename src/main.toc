@@ -4,3 +4,5 @@
 \contentsline {subsection}{\numberline {3.1}Installation \& Setup}{2}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Switch Configuration}{3}{subsection.3.2}%
 \contentsline {subsubsection}{\numberline {3.2.1}Hostname}{3}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Set a Password}{3}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Configure Telnet}{3}{subsubsection.3.2.3}%

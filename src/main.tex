@@ -75,15 +75,57 @@
         \end{enumerate}
         \subsection{Switch Configuration}\label{subsec:config}
         To enter configuration mode, enter the command \verb|configure terminal|.\\
-        You should now see \verb|Switch(config)#|
+        You should now see:\\
+        \verb|Switch(config)#|
             \subsubsection{Hostname}\label{subsubsec:hostname}
             Setting a hostname is especially important on multiple-device networks to tell the difference between each device.\\
             In configuration mode, run the following command:\\
             \verb|hostname [new-hostname]|
+
             \subsubsection{Set a Password}\label{subsubsec:passwrd}
-            This sets a password to access privileged execution mode, which will prompt you for a password when you enter the \verb|enable| command.
-    
-        \begin{enumerate}
-            \item
-        \end{enumerate}
+            This sets a password to access privileged execution mode, which will prompt you for a password when you enter the \verb|enable| command.\\
+            \verb|enable secret [password]|
+
+            \subsubsection{Configure Telnet}
+            \doclink{https://www.geeksforgeeks.org/introduction-to-telnet/}{Telnet} is a client/server application protocol used for remote access to terminals.\\
+            It is less secure than SSH, so we want to ensure that our system is secured and does not give unwanted users remote access to our console.\\
+            \verb|line vty 0 15|\\
+            \verb|password [password]|\\
+            \verb|login|\\
+            \verb|exit|\\
+            What this does is configure the first 16 virtual terminal (\verb|vty|) lines.\\
+            We set a password and tell it we want users to have to log in to access the virtual terminal using the password we set.\\
+            Next, we configure a Telnet Access List based on IPs. This tells Telnet to only allow certain IPs to access the virtual terminal, adding another layer of security as they will also have to input a password.\\
+            \verb|ip access-list standard TELNET-ACCESS|\\
+            \verb|permit [192.168.1.2]|\\
+            \verb|exit|\\
+
+            \subsubsection{Console Access}\label{subsubsec:console}
+            Next we set a password for accessing the console physically. \\
+            \verb|line console 0|\\
+            \verb|password [password]|\\
+            \verb|login|\\
+            \verb|exit|\\
+
+            \subsubsection{Configure Switch IP}\label{subsubsec:ip}
+            \verb|interface vlan 1|\\
+            \verb|ip address 192.168.1.1 255.255.255.0|\\
+            \verb|exit|\\
+            We can also configure the default gateway, which tells the switch the router's IP address.
+            \verb|ip default-gateway 192.168.1.0|
+
+            \subsubsection{Port Error Recovery}\label{subsubsec:errdisable}
+            \verb|errdisable recovery cause all|
+            \verb|errdisable recovery interval [seconds]|
+
+            \subsubsection{Securing Unused Ports}\label{subsubsec:unusedports}
+            Any ports that you know won't be used should be shutdown to ensure that nobody can walk up and connect their device to the port.\\
+            \verb|interface range fa0/3 - 24|\\
+            \verb|shutdown|\\
+            \verb|exit|\\
+
+            \subsubsection{Securing Used Ports}\label{subsubsec:usedports}
+            \verb|interface range fa0/1 - fa0/2|\\
+            \verb|switchport port-security maximum 1|\\
+            The second command configures the maximum amount of MAC addresses that can connect to each port.
 \end{document}
