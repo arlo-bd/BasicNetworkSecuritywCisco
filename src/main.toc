@@ -6,3 +6,8 @@
 \contentsline {subsubsection}{\numberline {3.2.1}Hostname}{3}{subsubsection.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.2}Set a Password}{3}{subsubsection.3.2.2}%
 \contentsline {subsubsection}{\numberline {3.2.3}Configure Telnet}{3}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Console Access}{4}{subsubsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.5}Configure Switch IP}{4}{subsubsection.3.2.5}%
+\contentsline {subsubsection}{\numberline {3.2.6}Port Error Recovery}{4}{subsubsection.3.2.6}%
+\contentsline {subsubsection}{\numberline {3.2.7}Securing Unused Ports}{4}{subsubsection.3.2.7}%
+\contentsline {subsubsection}{\numberline {3.2.8}Securing Used Ports}{4}{subsubsection.3.2.8}%
