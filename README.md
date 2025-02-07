@@ -1,2 +1,5 @@
-To view the PDF build notes, go to BasicNetworkSecuritywCisco/out/main.pdf \
-The presentation files can be found in BasicNetworkSecuritywCisco/src/Cybersecurity & Networks Workshop.pdf
+# Cybersecurity in Networks Workshop Documentation/Slides
+**Slides:** BasicNetworkSecuritywCisco/Cybersecurity & Networks Workshop.pdf
+**Technical Documentation:** BasicNetworkSecuritywCisco/ProjectDocumentation.pdf
+
+Please direct questions/feedback to arlo.bd@outlook.com!
